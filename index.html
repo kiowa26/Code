@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Livraison Mortelle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game">
+    <canvas id="c" width="800" height="500"></canvas>
+    <div id="msg"></div>
+    <button id="pause" title="Pause">⏸</button>
+    <button id="gear" title="Réglages">⚙️</button>
+
+    <div id="menu" class="screen">
+      <h1>Livraison Mortelle</h1>
+      <div id="pizza"></div>
+      <button id="play">Jouer</button>
+      <button id="diff">Mode facile</button>
+      <button id="chap">Chapitres</button>
+      <p id="hint">🔊 Clique n’importe où pour activer le son</p>
+    </div>
+
+    <div id="chapters" class="screen hidden">
+      <h2>Chapitres</h2>
+      <button id="c1">Chapitre 1 — La Pizza de Minuit</button>
+      <button id="c2">Chapitre 2 — Jim le serveur de pizza</button>
+      <button id="c3">Chapitre 3 — à venir</button>
+      <button id="cback">Retour</button>
+    </div>
+
+    <div id="options" class="screen hidden">
+      <h2>Réglages</h2>
+      <label>Luminosité <input id="bri" type="range" min="50" max="150" value="100"></label>
+      <label>Volume du son <input id="vol" type="range" min="0" max="100" value="60"></label>
+      <label>Graphismes : <span id="gfxLabel">Moyen</span> <input id="gfx" type="range" min="1" max="3" value="2"></label>
+      <label>Code développeur <input id="code" type="password" maxlength="4" placeholder="••••"></label>
+      <button id="tl">Timeline du jeu</button>
+      <button id="quit">Quitter la partie (menu)</button>
+      <button id="close">Fermer</button>
+    </div>
+
+    <div id="timeline" class="screen hidden">
+      <h2>Timeline : choisis une scène</h2>
+      <div id="tlgrid"></div>
+      <button id="tlclose">Fermer</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
